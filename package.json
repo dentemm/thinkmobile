@@ -1,0 +1,11 @@
+{
+  "name": "thinkmobile",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tim Claes",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.12.3"
+  }
+}
