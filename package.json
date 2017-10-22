@@ -5,6 +5,7 @@
   "author": "Tim Claes",
   "license": "MIT",
   "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run --prefix client dev\"",
     "server": "nodemon index.js"
   },
   "dependencies": {
@@ -12,6 +13,7 @@
     "mongoose": "^4.12.3"
   },
   "devDependencies": {
+    "concurrently": "^3.5.0",
     "nodemon": "^1.12.1"
   }
 }
