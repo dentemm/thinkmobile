@@ -3,6 +3,10 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+
+require('./models/image');
+require('./models/project');
+
 // app.get('/', (req, res) => {
 //   res.send({ hello: 'there'});
 // });
@@ -15,9 +19,7 @@ const app = express();
 
 const path = require('path');
 const publicPath = path.join(__dirname, 'client', 'public');
-const otherPath = path.join(__dirname, 'client', 'dist');
 app.use(express.static(publicPath));
-app.use(express.static(otherPath));
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/dist'));

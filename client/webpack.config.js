@@ -15,8 +15,13 @@ module.exports = (env) => {
     module: {
       rules: [
         {
-          loader: 'babel-loader',
           test: /\.js$/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['env', 'react']
+            }
+          },
           exclude: /node_modules/
         },
         {
